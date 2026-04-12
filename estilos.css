@@ -1,0 +1,261 @@
+
+html { font-size: 62.5%; }
+
+body {
+    margin: 0;
+    font-family: Roboto, Arial, sans-serif;
+    font-size: 2.5vmin;
+    /*font-size: 1.6rem;*/
+}
+
+/* h1 { font-size: 3.2rem; font-size: 8vmin;} */
+h1 { font-size: 7vmin;}
+
+.titulo { font-size: 5vmin; }
+
+.tituloQCER { font-size: 4vmin; }
+
+.cuadroQCER {
+    font-size: 2vmin;
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+.container img {
+    width: 50%;
+    border-radius: 3px;
+    float: left;
+    margin: 0px 20px 5px 0px;
+}
+
+.container {
+    width: 85vw;
+    padding: 0px 40px 0px 0px;
+}
+
+.cQCER {
+    border: 0;
+    width: calc(100vw - 40px);
+}
+
+
+/* HEADER */
+header {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 92px;
+    background: #0b3c5d;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 40px;
+    box-sizing: border-box;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.header-right {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* espacio entre menu, idioma y login */
+}
+
+/* MENU */
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px; /* espacio entre items de menu */
+    margin: 0;
+    padding: 0;
+}
+nav li { cursor: pointer; font-weight: bold; }
+nav li:hover { text-decoration: underline; }
+
+/* LOGIN */
+.login-btn, .logout-btn {
+    background: #e63946;
+    padding: 6px 14px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+/* JUSTIFICADO */
+.justificado {
+    text-align: justify;
+    text-justify: inter-word;
+}
+
+/* CONTENIDO */
+main {
+    margin-top: 100px;
+    padding: 30px;
+    background: #f0f0f0;
+    min-height: 100vh;    
+    min-height: calc(100vh - 100px);
+    background-image: url('LogoNegro.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;  /* Hace que quede fija al hacer scroll */
+}
+
+/* MODAL ANIMADO */
+.modal {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.6);
+    display: none;
+    align-items: center;
+    justify-content: center;
+    z-index: 2000;
+}
+
+.modal.show {
+    display: flex;
+    animation: fadeIn .3s;
+}
+
+.modal-content {
+    background: white;
+    padding: 30px;
+    width: 300px;
+    border-radius: 6px;
+    animation: slideDown .4s;
+    position: relative;
+}
+
+.modal-content input {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+}
+
+.modal-content button {
+    width: 100%;
+    padding: 10px;
+    background: #0b3c5d;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.close {
+    position: absolute;
+    top: 8px;
+    right: 10px;
+    cursor: pointer;
+}
+
+.error {
+    color: red;
+    font-size: 1.4rem;
+}
+
+/* ANIMACIONES */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes slideDown {
+    from { transform: translateY(-20px); opacity: 0; }
+    to { transform: translateY(0); opacity: 1; }
+}
+
+
+/* CONTENEDOR DEL SLIDER */
+.slider {
+  position: relative;
+  width: 100%;
+  /*height: 40vh;*/
+  overflow: hidden;
+}
+
+.slides {
+  display: flex;
+  width: 600%;
+/*  height: 100%; */
+  animation: slide 24s infinite;
+}
+
+.slides img {
+  width: 100%;
+/*  height: 100%; */
+  object-fit: cover;
+}
+
+.slide {
+  width: 100%;		/* vw vh vmin vmax % px */
+}
+
+/* ANIMACION */
+@keyframes slide {
+  0%   { margin-left: 0%; }
+  16%  { margin-left: 0%; }
+
+  20%  { margin-left: -100%; }
+  32%  { margin-left: -100%; }
+
+  36%  { margin-left: -200%; }
+  48%  { margin-left: -200%; }
+
+  52%  { margin-left: -300%; }
+  64%  { margin-left: -300%; }
+
+  68%  { margin-left: -400%; }
+  80%  { margin-left: -400%; }
+
+  84%  { margin-left: -500%; }
+  96% { margin-left: -500%; }
+
+  100% { margin-left: 0%; }
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    margin-top: 10px;
+}
+
+/* Ejemplo: Estilos para pantallas de 800px o más */
+/*@media (max-width: 800px) {
+    #menu {
+        display: none;
+    }
+}*/
+
+/*#menu {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0;
+}
+
+#menu li {
+    padding: 10px;
+    border-bottom: 1px solid #ccc;
+    cursor: pointer;
+}
+
+/* oculto por defecto 
+.hidden {
+    display: none;
+}
+
+/* opcional: estilo tipo dropdown 
+#menu-container {
+    width: 200px;
+}
+
+#menu-toggle {
+    width: 40px;
+    cursor: pointer;
+}*/
