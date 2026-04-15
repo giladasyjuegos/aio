@@ -1,11 +1,18 @@
+:root {
+    --ancho-cuadro: calc(100vw - 100px);
+}
 
 html { font-size: 62.5%; }
 
 body {
     margin: 0;
     font-family: Roboto, Arial, sans-serif;
-    font-size: 3vmin;
+    font-size: 3.5vmin;
+    text-align: center;
     /*font-size: 1.6rem;*/
+    /*width: 100%;*/
+    background-color: #F0F0F0;
+    color: #072B42;
 }
 
 /* h1 { font-size: 3.2rem; font-size: 8vmin;} */
@@ -21,30 +28,53 @@ h1 { font-size: 7vmin;}
     text-justify: inter-word;
 }
 
+.bloque {
+    width: 90%;
+    margin: auto;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.sub-azul {
+    color: blue;
+}
+.simil-h1 {
+    font-weight: bold;
+    font-size: 7vmin;
+}
+.caja-inicio { 
+    border: 1; 
+    width: 80%; 
+    padding: 15px;
+    margin: auto; 
+    border-width: 1; 
+    border-color: #0b3c5d; 
+    border-style: solid;
+}
+
+
+.container {
+    width: var(--ancho-cuadro);
+    padding: 10px 25px 15px 15px;
+    background-color: #09f;
+    border-radius: 10px;
+    line-height: 1.4;
+    box-shadow: 1px 5px 25px #0b3c5d;
+    /*box-sizing: content-box;*/
+    /*max-width: 900px;*/
+    margin: auto;
+    overflow: hidden;
+}
+
 .container img {
     width: 50%;
     border-radius: 8px;
     float: left;
     margin: 10px 20px 5px 0px;
-}
-
-.container {
-    width: 85vw;
-    width: calc(100% - 80px);
-    min-height: 48vh;
-    /*margin: 2% 6% 2% 6%;*/
-    padding: 10px 25px 15px 15px;
-    background-color: #09f;
-    border-radius: 10px;
-    line-height: 1.4;
-    /*text-shadow: -3px 3px 2px #aaa;*/
-    box-shadow: 1px 5px 25px #0b3c5d;
-    /*box-sizing:var();*/
-}
-
-.cQCER {
-    border: 0;
-    width: calc(100vw - 40px);
+    /*width: 100%;*/
+    max-width: calc(cont);
+    height: auto;
+    margin-right: 20px;
+    margin-bottom: 10px;
 }
 
 /* HEADER */
@@ -58,14 +88,15 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 40px;
+    padding: 0 35px;
     box-sizing: border-box;
     z-index: 1000;
 }
 
 .logo {
-    font-size: 2rem;
-    font-weight: bold;
+    height: 80px;
+    /*font-size: 2rem;*/
+    /*font-weight: bold;*/
 }
 
 .header-right {
@@ -76,6 +107,7 @@ header {
 
 /* MENU */
 nav ul {
+    font-size: 1.5rem;
     list-style: none;
     display: flex;
     gap: 20px; /* espacio entre items de menu */
@@ -83,7 +115,7 @@ nav ul {
     padding: 0;
 }
 nav li { cursor: pointer; font-weight: bold; }
-nav li:hover { text-decoration: underline; }
+nav li:hover { text-decoration: underline; color: #92c7f1}
 
 /* LOGIN */
 .login-btn, .logout-btn {
@@ -92,6 +124,7 @@ nav li:hover { text-decoration: underline; }
     border-radius: 4px;
     cursor: pointer;
     font-weight: bold;
+    font-size: 1.7rem;
 }
 
 /* JUSTIFICADO */
@@ -166,6 +199,82 @@ main {
     font-size: 1.4rem;
 }
 
+.boton-menu {
+    display: none;
+    background-color: transparent;
+    border: 0;
+}
+
+/*.boton-menu-img {
+    
+}*/
+
+#authBtn {
+    font-size: 1.8vmin;
+}
+
+/* MEDIA QUERY */
+@media (max-width: 799px) {
+    .header-right { gap: 15px; }    /* espacio entre menu, idioma y login */
+
+    nav ul { gap: 15px; }           /* espacio entre items de menu */
+
+    header { padding: 0 29px; }
+
+    h1{color: #394;}
+
+    
+}
+
+@media (max-width: 749px) {
+    .header-right {
+        gap: 10px; /* espacio entre menu, idioma y login */
+    }
+
+    nav ul {
+        gap: 10px; /* espacio entre items de menu */
+    }
+
+    header { padding: 0 20px; }
+
+    h1{color: #e63946;}
+}
+
+@media (max-width: 699px) {
+    .header-right {
+        gap: 5px; /* espacio entre menu, idioma y login */
+    }
+
+    nav ul {
+        gap: 5px; /* espacio entre items de menu */
+    }
+
+    header { padding: 0 15px; }
+
+    h1{color: #639;}
+}
+
+/*@media (max-width: 649px) {
+    header { padding: 0 9px; }
+}*/
+
+@media (max-width: 649px) {
+    #menu {
+        display: none;    /* OCULTA EL MENU */
+    }
+    .boton-menu { display: block; } /* muestro el boton de menu */
+    .header-right { gap: 20px; } /* espacio entre menu, idioma y login */
+    header { padding: 0 15px 0 30px; } /* espacio entre menu, idioma y login */
+    /*header { padding: 0 40px; } /* espacio entre menu, idioma y login */
+}
+
+@property --ancho-cuadro {
+    sintax: "<length>";
+	initial-value: 768px;
+}
+
+
+
 /* ANIMACIONES */
 @keyframes fadeIn {
     from { opacity: 0; }
@@ -176,8 +285,6 @@ main {
     from { transform: translateY(-20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
-
-
 /* CONTENEDOR DEL SLIDER */
 .slider {
   position: relative;
@@ -233,6 +340,7 @@ footer {
     color: white;
     margin-top: 10px;
 }
+
 
 /* Ejemplo: Estilos para pantallas de 800px o más */
 /*@media (max-width: 800px) {
