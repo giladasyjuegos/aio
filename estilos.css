@@ -90,7 +90,7 @@ header {
     justify-content: space-between;
     padding: 0 35px;
     box-sizing: border-box;
-    z-index: 1000;
+    z-index: 80;
 }
 
 .logo {
@@ -155,7 +155,7 @@ main {
     display: none;
     align-items: center;
     justify-content: center;
-    z-index: 2000;
+    z-index: 90;
 }
 
 .modal.show {
@@ -214,59 +214,85 @@ main {
 }
 
 /* MEDIA QUERY */
-@media (max-width: 799px) {
-    .header-right { gap: 15px; }    /* espacio entre menu, idioma y login */
 
-    nav ul { gap: 15px; }           /* espacio entre items de menu */
-
-    header { padding: 0 29px; }
-
-    h1{color: #394;}
-
-    
-}
-
-@media (max-width: 749px) {
+/*@media (max-width: 735px) {
     .header-right {
-        gap: 10px; /* espacio entre menu, idioma y login */
+        gap: 10px; / espacio entre menu, idioma y login /
     }
 
     nav ul {
-        gap: 10px; /* espacio entre items de menu */
+        gap: 10px; / espacio entre items de menu /
     }
 
     header { padding: 0 20px; }
 
-    h1{color: #e63946;}
+    .titulo{color: #e63946;}
 }
 
 @media (max-width: 699px) {
     .header-right {
-        gap: 5px; /* espacio entre menu, idioma y login */
+        gap: 5px; / espacio entre menu, idioma y login /
     }
 
     nav ul {
-        gap: 5px; /* espacio entre items de menu */
+        gap: 5px; / espacio entre items de menu /
     }
 
-    header { padding: 0 15px; }
+    header { padding: 0 10px; }
 
-    h1{color: #639;}
+    .titulo{color: #639;}
 }
 
-/*@media (max-width: 649px) {
+/@media (max-width: 649px) {
     header { padding: 0 9px; }
 }*/
 
-@media (max-width: 649px) {
+@media (max-width: 799px) {
+    .header-right { gap: 15px; }    /* espacio entre menu, idioma y login */
+    nav ul { gap: 12px; }           /* espacio entre items de menu */
+    header { padding: 0 15px 0 0; }
+    /*.titulo{color: rgb(255, 0, 170);}*/
+}
+
+@media (max-width: 767px) {
+    .header-right { gap: 12px; }    /* espacio entre menu, idioma y login */
+    nav ul { gap: 8px; }           /* espacio entre items de menu */
+    header { padding: 0 15px 0 10px; }
+    /*.titulo{color: #394;}*/
+}
+
+@media (width <= 755px) {
     #menu {
         display: none;    /* OCULTA EL MENU */
     }
-    .boton-menu { display: block; } /* muestro el boton de menu */
+    .nav-celu { display: block; } /* muestro el boton de menu */
     .header-right { gap: 20px; } /* espacio entre menu, idioma y login */
     header { padding: 0 15px 0 30px; } /* espacio entre menu, idioma y login */
     /*header { padding: 0 40px; } /* espacio entre menu, idioma y login */
 }
+
+@media (755px < width) {
+    header { padding: 0 15px 0 30px; } /* espacio entre menu, idioma y login */
+    .nav-celu { display: none; visibility: hidden;} /* este es el menu NUEVO */
+    .boton-menu { display: none; } /* este es el menu viejo */
+    .header-right { gap: 20px; } /* espacio entre menu, idioma y login */
+    .nav-img { display: none;}
+}
+
+
+/* ============================ esto no se usa ============================ */
+/*@media (max-width: 649px) {
+    #menu {
+        display: none;    / OCULTA EL MENU /
+    }
+    .boton-menu { display: block; } / muestro el boton de menu *
+    .header-right { gap: 20px; } / espacio entre menu, idioma y login *
+    header { padding: 0 15px 0 30px; } / espacio entre menu, idioma y login *
+    /header { padding: 0 40px; } / espacio entre menu, idioma y login *
+}*/
+/* ======================================================================== */
+
+
 
 @property --ancho-cuadro {
     sintax: "<length>";

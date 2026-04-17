@@ -7,39 +7,168 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Accademia Italiana</title>
 
-<!
-selector {
-    propiedad: valor; -esto es una declaracion
-    propiedad: valor; -esto es una declaracion
+<style>
+
+/*@media (500px <= width <= 1000px)*/
+
+.xxx {
+    width: 90%;
+    max-width: 500px;       /* miestras tenga menos de 500px toma el 90% */
+    width: min(90%, 500px);
+    place-content: center;  /* centra el contenido en H y V? */
+    text-align: center;
 }
 
-#09F Color en hexa
-boder y outline
->
+/* ======== caja externa ======== 
+nav class="nav-celu"
+div class="allItems__menu"
+<div class="Item1">
+<a href="#" class="item__menu">*/
 
+.nav-input {
+    display: none;
+}
+
+/* ======== caja externa ======== */
+.nav-celu {
+    /*display: flex;*/
+    flex-direction: column;
+    align-items: center;
+    width: 240px;
+    align-items:center;
+    list-style: none;
+    background-color: rgb(6, 117, 190);
+    border: 5px solid #175680;
+    position: fixed;
+    z-index: 99; /* arriba del header y el modal */
+    box-sizing: border-box;
+    border-radius: 15px;
+    /*padding: 5px;*/
+    top: 20px;
+    right: 20px;
+    visibility: hidden;
+}
+
+.allItems__menu {
+    /*display: block;*/
+    /*padding: 1.2em;*/
+    /*gap: 2px;*/
+    /*background-color:chocolate;*/
+    box-sizing: border-box;
+    border-radius: 15px;
+    /*width: 100%;*/
+    align-items: center;
+    /*display: block;*/
+    /*margin: 15px;*/
+
+    font-size: 1.7rem;
+    list-style: none;
+    gap: 50px; /* espacio entre items de menu */
+    margin: 0;
+    padding: 0;
+}
+
+.item__menu {
+    color: #fff;
+    text-decoration: none;
+    display: block; 
+    cursor: pointer; 
+    font-weight: bold; 
+    width: 100%;
+    text-decoration: none;
+    /*text-transform: uppercase;*/
+    line-height: 5.5rem;
+    width: 100%;
+}
+
+.item__menu:active {
+    background-color: #162942; /* rgb(14, 34, 48) */
+    text-decoration: none;
+}
+
+.nav-input:checked + .nav-celu {
+    display: block;
+    visibility: visible;
+}
+
+.nav-celu{ /* NAV del menu-celu -- viejo*/
+    visibility: hidden;
+}
+
+.Item1, .Item2, .Item3, .Item4, .Item5, .Item6 {
+    background-color: #162942; 
+    /*border: 2px solid #861665;*/
+    width: 220px;
+    box-sizing: border-box;
+    border-radius: 10px;
+    margin: 5px;
+}
+
+.Item1 {
+    background-color: #111c2b;
+}
+
+.Item1:hover {
+    background-color: #000;
+}
+
+.boton-menu { /* este es el menu viejo */
+    display: none;
+}
+
+.nav-input { /* este es el checkbox */
+    display: none;
+}
+
+.nav-celu { /* este es el NENU Nuevo */
+    display: none;
+}
+
+</style>
 </head>
+
 
 <body>
 
 <header>
-  <div><img src="Logo cursiva.png" class="logo"></div>
+<div><img src="Logo cursiva.png" class="logo"></div>
 
 <!-- CARGA EL MENU -->
-  <div class="header-right">
+<div class="header-right">
     <nav><ul id="menu"></ul></nav>
 
     <select id="langSelect" onchange="cambiarIdioma(this.value)">
-      <option value="es">Espa&ntilde;ol</option>
-      <option value="it">Italiano</option>
+        <option value="es">Espa&ntilde;ol</option>
+        <option value="it">Italiano</option>
     </select>
 
     <div id="authBtn"></div>
-    
-    <button class="boton-menu">
-        <!img src="Menu.png" class="boton-menu-img" alt="Menu" height= 60px;>
-        <img src="Menu.png" alt="Menu" height= 48px;>
-    </button>
-  </div>
+
+    <! ============================ esto no se usa ============================ >
+    <button id="abrirC" class="boton-menu"><!img src="Menu.png" class="boton-menu-img" alt="Menu" height= 60px;><img src="Menu.png" alt="Menu" height= 48px;></button>
+    <! ======================================================================== >
+
+    <label for="menuCelu" id="idMenuCelu"> <! menu - nav__label >
+        <img src="Menu.png" class="nav-img" alt="Menu" height= 48px;> <! nav__img >
+    </label>
+    <input type="checkbox" id="menuCelu" class="nav-input"> <! menu - nav__input >
+
+    <nav class="nav-celu"> <! nav >
+        <!div class="nav-caja"> <! nav__container >
+            <div class="allItems__menu"> <! nav__menu >
+                <!a href="https://www.youtube.com/watch?v=TeUF-MQZfAw" class="item__menu"/a>
+                <div class="Item1"><a href="#" class="item__menu">Cerrar&nbsp;&nbsp;&nbsp;Menu</a></div>
+                <div class="Item2"><a href="#" class="item__menu">Inicio</a></div>
+                <div class="Item3"><a href="#" class="item__menu">Cursos</a></div> <! nav__item >
+                <div class="Item4"><a href="#" class="item__menu">Casos&nbsp;&nbsp;Extosos</a></div>
+                <div class="Item5"><a href="#" class="item__menu">Qui&eacute;nes&nbsp;&nbsp;Somos</a></div>
+                <div class="Item6"><a href="#" class="item__menu">Cont&aacute;ctenos</a></div>
+            </div>
+        <!/div>
+    </nav>
+
+
+</div>
 
 </header>
 
@@ -57,9 +186,57 @@ boder y outline
     </div>
 </div>
 
+
+
 <script>
 
+/*
+
+<nav id="navC" class="menu-celu">
+    <ul class="caja-menu-celu">
+        <li id="cerrarC" class="itemsDeMenu">
+            <a href="#" class="itemsDeMenu-link">Cerrar&nbsp;&nbsp;&nbsp;Men&uacute;</a>
+        </li>
+        <li class="itemsDeMenu">
+            <a href="#" class="itemsDeMenu-link">Inicio</a>
+        </li>
+        <li class="itemsDeMenu">
+            <a href="#" class="itemsDeMenu-link">Cursos</a>
+        </li>
+        <li class="itemsDeMenu">
+            <a href="#" class="itemsDeMenu-link">Casos Exitosos</a>
+        </li>
+        <li class="itemsDeMenu">
+            <a href="#" class="itemsDeMenu-link">Qui&eacute;nes Somos</a>
+        </li>
+        <li class="itemsDeMenu">
+            <a href="#" class="itemsDeMenu-link">Cont&aacute;ctenos</a>
+        </li>
+    </ul>
+</nav>
+
+*/
+
+/*
+
+    <nav class="menu-celu">
+        <!aside class="caja-menu-celu">
+        <div class="caja-menu-celu">
+            <li class="itemsDeMenu"><a href="#" class="itemsDeMenu-link">Inicio</a></li>
+            <li><a href="#" class="itemsDeMenu">Cursos</a></li>
+            <li><a href="#" class="itemsDeMenu">Casos Extosos</a></li>
+            <li><a href="#" class="itemsDeMenu">Quienes Somos</a></li>
+            <li><a href="#" class="itemsDeMenu">Contactenos</a></li>
+        </div>
+        <!/aside>
+    </nav>
+
+*/
+
 /* ===== DATA ===== */
+const navC = document.querySelector("#navC");
+const abrirc = document.querySelector("#abrirC");
+const cerrarC = document.querySelector("#cerrarC");
 const textos = {
     es: {
         menu: ["Inicio", "Cursos", "Casos Exitosos", "Quiénes Somos", "Contáctenos", "&Aacute;rea Alumnos"],
@@ -94,6 +271,13 @@ const secciones = ["inicio","cursos","casos","quienes", "contacto", "area"];
 /* ===== STATE ===== */
 let idioma = localStorage.getItem("idioma") || "es";
 let usuario = localStorage.getItem("usuario");
+
+/* ===== MIO ===== */
+abrirC.addEventListener("click", () => {
+    navC.classList.add("visible");
+})
+
+
 
 /* ===== FUNCTIONS ===== */
 function renderMenu() {
@@ -174,6 +358,16 @@ function init() {
         ? `<div class="logout-btn" onclick="logout()">${textos[idioma].logout}</div>`
         : `<div class="login-btn" onclick="abrirLogin()">${textos[idioma].login}</div>`;
     renderMenu();
+}
+
+function menuOn() {
+    document.querySelector(".boton-menu").addEventListener("click", iDale);
+    /*document.getElementById("abrrirC").value = clickA;
+    document.getElementById("cerrarC").value = clickC;*/
+}
+
+function iDale() {
+    alert("hola");
 }
 
 function vBanner() {
