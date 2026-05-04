@@ -8,7 +8,6 @@ body {
     margin: 0;
     font-family: Roboto, Arial, sans-serif;
     font-size: 3.5vmin;
-    text-align: center;
     /*font-size: 1.6rem;*/
     /*width: 100%;*/
     background-color: #F0F0F0;
@@ -18,7 +17,12 @@ body {
 /* h1 { font-size: 3.2rem; font-size: 8vmin;} */
 h1 { font-size: 7vmin;}
 
-.titulo { font-size: 5vmin; }
+.titulo { 
+    font-size: 5vmin; 
+    display:inline-block;
+    margin: 2px 0 10px 0; 
+    text-align: center;
+}
 
 .tituloQCER { font-size: 4vmin; }
 
@@ -50,7 +54,6 @@ h1 { font-size: 7vmin;}
     border-color: #0b3c5d; 
     border-style: solid;
 }
-
 
 .container {
     width: var(--ancho-cuadro);
@@ -95,6 +98,7 @@ header {
 
 .logo {
     height: 80px;
+    width: 72px;
     /*font-size: 2rem;*/
     /*font-weight: bold;*/
 }
@@ -199,55 +203,90 @@ main {
     font-size: 1.4rem;
 }
 
-.boton-menu {
+/*BORRAR/.boton-menu {
+    display: none;
+    background-color: transparent;
+    border: 0;
+}*/
+
+.nav-input {
     display: none;
     background-color: transparent;
     border: 0;
 }
 
-/*.boton-menu-img {
-    
-}*/
-
 #authBtn {
     font-size: 1.8vmin;
 }
 
+footer {
+    text-align: center;
+    padding: 10px;
+    background: #222;
+    color: white;
+    margin-top: 10px;
+}
+
+/* oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo  C U R S O S  oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo */
+.papa {
+    /* background-color: aquamarine; */
+    width: 90%;
+    border: 2px solid #000;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px 0 15px 10px;
+    box-shadow: 1px 5px 25px #0b3c5d;
+    min-height: 200px;
+    align-items: center;
+    align-content: center;
+    display: grid;
+    grid-template-areas: 
+    "elTitulo elTitulo"
+    "elLibro elTexto"
+    "elPie elPie";
+    grid-template-columns: 1fr 2fr;
+}
+
+.papa .cabeza { grid-area: elTitulo; }
+
+.papa .tapa-libro { grid-area: elLibro; }
+
+.papa .textoD { grid-area: elTexto; margin-left: 10px;}
+
+.papa .PdP { grid-area: elPie; }
+
+.tapa-libro { /* DIV */
+    /*background-color: #aaa;*/
+    display: block;
+    width: 98%;
+    max-width: 300px;
+    margin: auto;
+    text-align: center;
+    align-content: center;
+}
+
+/* IMG */
+.tLibro { border: 2px solid #aaa; border-radius: 10px; }
+
+.cabeza { text-align: left; }
+
+.textoD { margin-right: 20px; text-align:left; }
+
+/* background-color: lightseagreen; */
+.PdP { margin: 10px; }
+
+/* clase de la imagen de la tapa del libro*/
+.tLibro { width: 95%; }
+
+.listing { text-align: justify; }
+
+.itemLI { margin: 10px 0;}
+/* oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo  / C U R S O S  oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo */
+
+
 /* MEDIA QUERY */
-
-/*@media (max-width: 735px) {
-    .header-right {
-        gap: 10px; / espacio entre menu, idioma y login /
-    }
-
-    nav ul {
-        gap: 10px; / espacio entre items de menu /
-    }
-
-    header { padding: 0 20px; }
-
-    .titulo{color: #e63946;}
-}
-
-@media (max-width: 699px) {
-    .header-right {
-        gap: 5px; / espacio entre menu, idioma y login /
-    }
-
-    nav ul {
-        gap: 5px; / espacio entre items de menu /
-    }
-
-    header { padding: 0 10px; }
-
-    .titulo{color: #639;}
-}
-
-/@media (max-width: 649px) {
-    header { padding: 0 9px; }
-}*/
-
 @media (max-width: 799px) {
+    .menu-celu { display: none; visibility: hidden;}
     .header-right { gap: 15px; }    /* espacio entre menu, idioma y login */
     nav ul { gap: 12px; }           /* espacio entre items de menu */
     header { padding: 0 15px 0 0; }
@@ -255,50 +294,30 @@ main {
 }
 
 @media (max-width: 767px) {
+    .menu-celu { display: none; visibility: hidden;}
     .header-right { gap: 12px; }    /* espacio entre menu, idioma y login */
     nav ul { gap: 8px; }           /* espacio entre items de menu */
     header { padding: 0 15px 0 10px; }
     /*.titulo{color: #394;}*/
 }
 
-@media (width <= 755px) {
-    #menu {
-        display: none;    /* OCULTA EL MENU */
-    }
-    .nav-celu { display: block; } /* muestro el boton de menu */
-    .header-right { gap: 20px; } /* espacio entre menu, idioma y login */
-    header { padding: 0 15px 0 30px; } /* espacio entre menu, idioma y login */
-    /*header { padding: 0 40px; } /* espacio entre menu, idioma y login */
+@media (756px <= width) {
+    .menu-celu { display: none; visibility: hidden;}
+    #imgchange { display: none; }   /* OCULTA EL MENU */
 }
 
 @media (755px < width) {
     header { padding: 0 15px 0 30px; } /* espacio entre menu, idioma y login */
-    .nav-celu { display: none; visibility: hidden;} /* este es el menu NUEVO */
-    .boton-menu { display: none; } /* este es el menu viejo */
+    .menu-celu { display: none; visibility: hidden;}
     .header-right { gap: 20px; } /* espacio entre menu, idioma y login */
-    .nav-img { display: none;}
+    .nav-img { display: none; visibility: hidden;}
 }
 
-
-/* ============================ esto no se usa ============================ */
-/*@media (max-width: 649px) {
-    #menu {
-        display: none;    / OCULTA EL MENU /
-    }
-    .boton-menu { display: block; } / muestro el boton de menu *
-    .header-right { gap: 20px; } / espacio entre menu, idioma y login *
-    header { padding: 0 15px 0 30px; } / espacio entre menu, idioma y login *
-    /header { padding: 0 40px; } / espacio entre menu, idioma y login *
-}*/
-/* ======================================================================== */
-
-
-
-@property --ancho-cuadro {
-    sintax: "<length>";
-	initial-value: 768px;
+@media (width <= 755px) {
+    #menu { display: none; }   /* OCULTA EL MENU */
+    .header-right { gap: 20px; } /* espacio entre menu, idioma y login */
+    header { padding: 0 15px 0 30px; } /* espacio entre menu, idioma y login */
 }
-
 
 
 /* ANIMACIONES */
@@ -311,25 +330,26 @@ main {
     from { transform: translateY(-20px); opacity: 0; }
     to { transform: translateY(0); opacity: 1; }
 }
+
 /* CONTENEDOR DEL SLIDER */
 .slider {
-  position: relative;
-  width: 100%;
-  /*height: 40vh;*/
-  overflow: hidden;
+    position: relative;
+    width: 100%;
+    /*height: 40vh;*/
+    overflow: hidden;
 }
 
 .slides {
-  display: flex;
-  width: 600%;
+    display: flex;
+    width: 600%;
 /*  height: 100%; */
-  animation: slide 24s infinite;
+    animation: slide 24s infinite;
 }
 
 .slides img {
-  width: 100%;
+    width: 100%;
 /*  height: 100%; */
-  object-fit: cover;
+    object-fit: cover;
 }
 
 .slide {
@@ -359,45 +379,4 @@ main {
   100% { margin-left: 0%; }
 }
 
-footer {
-    text-align: center;
-    padding: 10px;
-    background: #222;
-    color: white;
-    margin-top: 10px;
-}
 
-
-/* Ejemplo: Estilos para pantallas de 800px o más */
-/*@media (max-width: 800px) {
-    #menu {
-        display: none;
-    }
-}*/
-
-/*#menu {
-    list-style: none;
-    padding: 0;
-    margin: 10px 0;
-}
-
-#menu li {
-    padding: 10px;
-    border-bottom: 1px solid #ccc;
-    cursor: pointer;
-}
-
-/* oculto por defecto 
-.hidden {
-    display: none;
-}
-
-/* opcional: estilo tipo dropdown 
-#menu-container {
-    width: 200px;
-}
-
-#menu-toggle {
-    width: 40px;
-    cursor: pointer;
-}*/
