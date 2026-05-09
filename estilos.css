@@ -228,6 +228,19 @@ footer {
 }
 
 /* oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo  C U R S O S  oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo */
+.papa-cuadro {
+    /* background-color: aquamarine; */
+    width: 90%;
+    border: 2px solid #000;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px 0 15px 10px;
+    box-shadow: 1px 5px 25px #0b3c5d;
+    min-height: 100px;
+    align-items: center;
+    align-content: center;
+}
+
 .papa {
     /* background-color: aquamarine; */
     width: 90%;
@@ -259,7 +272,7 @@ footer {
     /*background-color: #aaa;*/
     display: block;
     width: 98%;
-    max-width: 300px;
+    max-width: 250px;
     margin: auto;
     text-align: center;
     align-content: center;
