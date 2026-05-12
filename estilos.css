@@ -56,7 +56,9 @@ h1 { font-size: 7vmin;}
 }
 
 .container {
-    width: var(--ancho-cuadro);
+    /*width: calc(100vw - 100px);*/
+    /*width: var(--ancho-cuadro);*/
+    width: 95%;
     padding: 10px 25px 15px 15px;
     background-color: #09f;
     border-radius: 10px;
