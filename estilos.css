@@ -24,7 +24,7 @@ h1 { font-size: 7vmin;}
     text-align: center;
 }
 
-.tituloQCER { font-size: 4vmin; }
+.tituloQCER { font-size: 3.4vmin; }
 
 .cuadroQCER {
     font-size: 2.5vmin;
@@ -46,8 +46,11 @@ h1 { font-size: 7vmin;}
     font-size: 7vmin;
 }
 .caja-inicio { 
-    border: 1; 
-    width: 80%; 
+    border: 1;
+    /*background-color: hotpink;*/
+    width: 85%;
+    /*max-width: 1200px;*/
+    line-height: 1.5;
     padding: 15px;
     margin: auto; 
     border-width: 1; 
@@ -59,13 +62,12 @@ h1 { font-size: 7vmin;}
     /*width: calc(100vw - 100px);*/
     /*width: var(--ancho-cuadro);*/
     width: 95%;
+    /*max-width: 1800px;*/
     padding: 10px 25px 15px 15px;
     background-color: #09f;
     border-radius: 10px;
     line-height: 1.4;
     box-shadow: 1px 5px 25px #0b3c5d;
-    /*box-sizing: content-box;*/
-    /*max-width: 900px;*/
     margin: auto;
     overflow: hidden;
 }
@@ -298,40 +300,84 @@ footer {
 .itemLI { margin: 10px 0;}
 /* oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo  / C U R S O S  oOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOoOo */
 
+.caja-contact {
+    display: block;
+}
+
+.contact-img {
+    width: 55px;
+    height: 55px;
+    padding: auto;
+    float: left;
+    align-content: center;
+}
+.contact-txt1 {
+    display: block;
+    height: 55px;
+    align-content: center;
+    margin: 0 15px;
+    float: left;
+    font-size: 3.5vmin;
+}
+.contact-txt2 {
+    display: block;
+    height: 55px;
+    align-content: center;
+    text-align: left;
+    font-size: 3vmin;
+}
+
+.fSize1{
+    font-size: 4vmin;
+    font-weight: bold;
+}
+
+.fSize2{
+    font-size: 3vmin;
+}
 
 /* MEDIA QUERY */
-@media (max-width: 799px) {
-    .menu-celu { display: none; visibility: hidden;}
-    .header-right { gap: 15px; }    /* espacio entre menu, idioma y login */
-    nav ul { gap: 12px; }           /* espacio entre items de menu */
-    header { padding: 0 15px 0 0; }
-    /*.titulo{color: rgb(255, 0, 170);}*/
+@media (660px <= width) {
+    #mmenuc { display: none; visibility: hidden;}
+    /*.menu-celu { display: none; visibility: hidden; }*/
+    #imgchange { display: none; }   /* OCULTA EL MENU */
+    .login-btn, .logout-btn { font-size: 1.1rem; }
+    .header-right { gap: 10px; }    /* espacio entre menu, idioma y login */
+    nav ul { gap: 6px; }           /* espacio entre items de menu */
+    header { padding: 0 1px 0 5px; }
+    .bloque{color: rgb(0, 255, 0);}
 }
 
-@media (max-width: 767px) {
-    .menu-celu { display: none; visibility: hidden;}
+/*@media (max-width: 767px) {*/
+@media (685px <= width) {
+    #mmenuc { display: none; visibility: hidden;}
+    /*.menu-celu { display: none; visibility: hidden; }*/
+    #imgchange { display: none; }   /* OCULTA EL MENU */
+    .login-btn, .logout-btn { font-size: 1.4rem; }
     .header-right { gap: 12px; }    /* espacio entre menu, idioma y login */
     nav ul { gap: 8px; }           /* espacio entre items de menu */
-    header { padding: 0 15px 0 10px; }
-    /*.titulo{color: #394;}*/
+    header { padding: 0 1px 0 10px; }
+    .bloque{color: rgb(255, 255, 0);}
 }
 
-@media (756px <= width) {
-    .menu-celu { display: none; visibility: hidden;}
-    #imgchange { display: none; }   /* OCULTA EL MENU */
+/*@media (max-width: 799px) {*/
+@media (720px <= width) {
+    #mmenuc { display: none; visibility: hidden;}
+    /*.menu-celu { display: none; visibility: hidden; }*/
+    #imgchange { display: none; }   /* OCULTA EL MENU (imagen) */
+    /*#imgchange { display: inherit; }*/
+    .login-btn, .logout-btn { font-size: 1.7rem; }
+    .header-right { gap: 15px; }    /* espacio entre menu, idioma y login */
+    nav ul { gap: 12px; }           /* espacio entre items de menu */
+    header { padding: 0 5px 0 15px; }
+    .bloque{color: rgb(255, 0, 0);}
 }
 
-@media (755px < width) {
-    header { padding: 0 15px 0 30px; } /* espacio entre menu, idioma y login */
-    .menu-celu { display: none; visibility: hidden;}
+@media (width <= 659px) {
+    #menu { display: none; }   /* OCULTA EL MENU (texto) */
     .header-right { gap: 20px; } /* espacio entre menu, idioma y login */
-    .nav-img { display: none; visibility: hidden;}
-}
-
-@media (width <= 755px) {
-    #menu { display: none; }   /* OCULTA EL MENU */
-    .header-right { gap: 20px; } /* espacio entre menu, idioma y login */
     header { padding: 0 15px 0 30px; } /* espacio entre menu, idioma y login */
+    .bloque{color: rgb(0, 0, 255);}
 }
 
 
