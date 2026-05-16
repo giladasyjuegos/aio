@@ -467,7 +467,17 @@ footer {
 
 /* --------------------------- */
 
-@media screen and (orientation: portrait) {
+@media screen and (orientation: landscape) and (width >= 2500px) {
+    .tapa-libro {
+        max-width: 400px;
+    }
+    .puntoLI {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/*@media screen and (orientation: portrait) {
     .bloque {
         background-color: #e63946;
     }
@@ -486,7 +496,7 @@ footer {
         width: 30px;
         height: 30px;
     }
-}
+}*/
 
 
 /* ANIMACIONES */
