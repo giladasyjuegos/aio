@@ -328,6 +328,15 @@ footer {
 
 .papa .card-txt { grid-area: cTxt; }
 */
+.textoQS{
+    width: 90%;
+    text-align: justify;
+    text-justify: inter-word;
+    font-size: 3.5vmin;
+    line-height: 1.6;
+    margin: auto;
+}
+
 .card {
     border: 2px solid #072B42;
     background-color:rgb(221, 221, 221);
