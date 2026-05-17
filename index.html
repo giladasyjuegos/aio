@@ -19,17 +19,8 @@
     text-align: center;
 }
 
-/* ======== CAJA MENU CELU ======== 
-                label for="menuCelu"
-#imgchange      img src="Menu.png" id="imgchange" ***class="nav-img" BORRE ESTA CLASE***
-#menuCelu       input type="checkbox" id="menuCelu" class="nav-input"
-.nav-input      input type="checkbox" id="menuCelu" class="nav-input"
-.menu-celu      div class="menu-celu"           *** CONTENEDOR ***
-.allItems__menu nav class="allItems__menu"      *** CAPA 1 ***
-.nav-ul-celu    ul class="nav-ul-celu"          *** CAPA 2 ***
-                li onclick="cargar('inicio')"   *** ITEMS ***
-*/
 
+/* ======== CAJA MENU CELU ======== */
 
 /* ======== caja externa ======== */
 .menu-celu { /* DIV QUE ESTA DESPUES DEL INPUT */
@@ -50,8 +41,12 @@
     border-radius: 15px;
     top: 35px;
     right: 35px;
-    visibility: hidden;
+    /*visibility: hidden;*/
+}
 
+.menu-celu{
+    display: none;
+    visibility: hidden;
 }
 
 .nav-ul-celu {
@@ -75,11 +70,6 @@
 .nav-input:checked + .menu-celu {
     display: block;
     visibility: visible;
-}
-
-.menu-celu{
-    display: none;
-    visibility: hidden;
 }
 
 .nav-input { /* este es el checkbox */
@@ -142,9 +132,7 @@
 
     <div id="authBtn"></div>
 
-    <!label for="menuCelu" id="idMenuCelu">
     <label for="menuCelu" style="z-index: 100;">
-        <!img src="Menu.png" id="imgchange" class="nav-img" alt="" width=48px height= 48px;>
         <img src="MenuP.png" id="imgchange" alt="" width=48px height= 48px;>
     </label>
 
@@ -152,13 +140,7 @@
 
     <div id="mmenuc" class="menu-celu">
         <nav class="allItems__menu">
-            <ul class="nav-ul-celu">
-                <li class="idm" onclick="cargar('inicio')">Inicio</li>
-                <li class="idm" onclick="cargar('cursos')">Cursos</li>
-                <li class="idm" onclick="cargar('casos')">Casos Exitosos</li>
-                <li class="idm" onclick="cargar('quienes')">Qui&eacute;nes Somos</li>
-                <li class="idm" onclick="cargar('contacto')">Cont&aacute;ctenos</li>
-            </ul>
+            <ul id="menu-portrait" class="nav-ul-celu"></ul>
         </nav>
     </div>
 </div>
@@ -220,7 +202,7 @@ const textos = {
             contacto: '<img alt="Contáctenos" width="100%" srcset="Contacto-s.jpg 300w, Contacto-m.jpg 600w, Contacto-l.jpg 1200w, Contacto-xl.jpg 2000w" sizes="70vmin">' +
                     '<br><h2>Cont&aacute;ctenos</h2><br>' +
                     '<section class="caja-contact"><div class="contact-img"><img src="Ema50.png" ></div><div class="contact-txt1"><b>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></div><div class="contact-txt2">accademiaitalianaonline@gmail.com<br>accademiaitalianaonlineadm@gmail.com</div></section><br>' +
-                    '<section class="caja-contact"><div class="contact-img"><img src="Tel48.png"></div><div class="contact-txt1"><b>Tel&eacute;fono:&nbsp;&nbsp;&nbsp;</b></div><div class="contact-txt2">+54 911 6066 8184<br>(lunes a sabado, horario argentino 9 - 12 am)</div></section><br>' +
+                    '<section class="caja-contact"><div class="contact-img"><img src="Tel48.png"></div><div class="contact-txt1"><b>Tel&eacute;fono:&nbsp;&nbsp;&nbsp;</b></div><div class="contact-txt2"><a href="tel:+54 911 6066 8184">+54 911 6066 8184</a><br>(lunes a sabado, horario argentino 9 - 12 am)</div></section><br>' +
                     '<section class="caja-contact"><div class="contact-img"><img src="Wsp50.png"></div><div class="contact-txt1"><b>Whatsapp: </b></div><div class="contact-txt2">+54 911 6921 0441 (las 24 horas)</div></section><br><br><br>',
             area: "<h1>@rea del Alumno</h1><p>Contenido exclusivo para el alumno que inici&oacute; seci&oacute;n</p>"
         },
@@ -267,7 +249,7 @@ const textos = {
             contacto: '<img alt="Contattaci" width="100%" srcset="Contattaci-s.jpg 300w, Contattaci-m.jpg 600w, Contattaci-l.jpg 1200w, Contattaci-xl.jpg 2000w" sizes="70vmin">' +
                     '<br><h2>Cont&aacute;ctenos</h2><br>' +
                     '<section class="caja-contact"><div class="contact-img"><img src="Ema50.png" ></div><div class="contact-txt1"><b>Email:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</b></div><div class="contact-txt2">accademiaitalianaonline@gmail.com<br>accademiaitalianaonlineadm@gmail.com</div></section><br>' +
-                    '<section class="caja-contact"><div class="contact-img"><img src="Tel48.png"></div><div class="contact-txt1"><b>Tel&eacute;fono:&nbsp;&nbsp;&nbsp;</b></div><div class="contact-txt2">+54 911 6066 8184<br>(Da lunedì a sabato, nell’orario agentino 9 - 12 am)</div></section><br>' +
+                    '<section class="caja-contact"><div class="contact-img"><img src="Tel48.png"></div><div class="contact-txt1"><b>Tel&eacute;fono:&nbsp;&nbsp;&nbsp;</b></div><div class="contact-txt2"><a href="tel:+54 911 6066 8184">+54 911 6066 8184</a><br>(Da lunedì a sabato, nell’orario agentino 9 - 12 am)</div></section><br>' +
                     '<section class="caja-contact"><div class="contact-img"><img src="Wsp50.png"></div><div class="contact-txt1"><b>Whatsapp: </b></div><div class="contact-txt2">+54 911 6921 0441 (24 su 24 ore)</div></section><br><br>' +
                     '<span class="fSize1">&nbsp;<strong>Tariffa: </strong><span class="fSize2">aggiornata al 1 aprile 2026.</span></span></p>' +
                     '<p>&nbsp;&nbsp;&nbsp;&nbsp;<span class="fSize2"><u>Corsi gruppali:</u> </span><b>$ 18.000,00</b>. Peso argentino l’ora.</p>' +
@@ -294,58 +276,79 @@ let usuario = localStorage.getItem("usuario");
 
 
 /* ===== CAMBIA LA MAGEN DEL MENU ===== */
-/*let imgchange = document.getElementById("imgchange");
-let celMenu = document.getElementById("menuCelu");*/
-
-let eseRC = "";
-let Xo3Rayas = "";
+/*let eseRC = "";
+let Xo3Rayas = "";*/
 const cbox = document.getElementById('menuCelu');   /* checkbox */
 const cMenu = document.getElementById('mmenuc');        /* div contenedor del menu */
 const imagen = document.getElementById("imgchange");
-imagen.addEventListener("click", function() {
-    eseRC = this.src;
+imagen.addEventListener("click", () => {
+    imagen.src = cbox.checked
+    ? "MenuP.png"
+    : "MenuX.png";
+/*    eseRC = this.src;
     Xo3Rayas = eseRC.slice(-9);
     if (Xo3Rayas === "MenuP.png") {
         eseRC = "MenuX.png";
-        /*cMenu.style.visibility = true;*/
-        /*cMenu.style.visibility = "visible";*/
     }else if(Xo3Rayas === "MenuX.png") {
         eseRC = "MenuP.png";
-        /*cMenu.style.visibility = false;*/
-        /*cMenu.style.visibility = "hidden";*/
     }else{
         return;
     }
     this.src = eseRC;
-    /*console.log(eseRC);*/
+    /console.log(eseRC);*/
 });
 
+/*soporte para los botones Atrás/Adelante del navegador*/
+window.addEventListener("popstate", () => {
+    const hash = window.location.hash.replace("#", "");
 
-/*if (checkbox.checked) {}
-
-if(cMenu.style.visibility == "visible") {
-    alert("visible " + cMenu.style.visibility);
-    cMenu.style.visibility = "hidden";
-} else {
-    alert("hidden " + cMenu.style.visibility);
-    cMenu.style.visibility = "visible";
-}*/
-
-
-/*const cMenu = document.getElementById('mmenuc');
-    checkbox.addEventListener('onClick', function() {
-    if(cMenu.style.visibility == "visible") {
-        alert("visible " + cMenu.style.visibility);
-        cMenu.style.visibility = "hidden";
-    } else {
-        alert("hidden " + cMenu.style.visibility);
-        cMenu.style.visibility = "visible";
+    if (secciones.includes(hash)) {
+        cargar(hash);
     }
-});*/
+});
 
+/* esto es para que no recargue la pag. al cambiar de seccion */
+window.addEventListener("load", () => {
+    const hash = window.location.hash.replace("#", "");
 
+    if (secciones.includes(hash)) {
+        cargar(hash);
+    } else {
+        cargar("inicio");
+    }
+});
 
 /* ===== FUNCTIONS ===== */
+function renderMenuC() {
+    const ul = document.getElementById("menu-portrait");
+    ul.innerHTML = "";
+/* "textos" idiomas(es-it) / "idioma" idioma actual / ".menu" array de ITems ["Inicio", "Cursos", "ETC"] / "txt" ITem / "i" índice. */
+    textos[idioma].menu.forEach((txt, i) => {
+        if (secciones[i] === "area" && !usuario) return;
+            /* secciones = inicio, cursos, casos, etc */
+        const li = document.createElement("li");
+        li.textContent = txt;
+        li.classList.add("idm");
+        li.addEventListener("click", () => {
+            // cargar contenido
+            cargar(secciones[i]);
+            // cambiar URL sin recargar
+            history.pushState(
+                {},
+                "",
+                "#" + secciones[i]
+            );
+            // subir al topo de la Pag.
+            window.scrollTo({ top: 0, behavior: "smooth" }); // behavior opcional
+            // cerrar menú hamburguesa
+            cbox.checked = false;
+            // cambiar imagen hamburguesa
+            imagen.src = "MenuP.png";
+        });
+        ul.appendChild(li);
+    });
+}
+
 function renderMenu() {
     const ul = document.getElementById("menu");
     ul.innerHTML = "";
@@ -356,16 +359,32 @@ function renderMenu() {
         const li = document.createElement("li");
         li.textContent = txt;
 
-        li.addEventListener("click", () => { cargar(secciones[i]); });
+        /*li.addEventListener("click", () => { cargar(secciones[i]); });*/
+        li.addEventListener("click", () => {
+            // cargar contenido
+            cargar(secciones[i]);
+            // cambiar URL sin recargar
+            history.pushState(
+                {},
+                "",
+                "#" + secciones[i]
+            );
+            // subir al topo de la Pag.
+            window.scrollTo({ top: 0, behavior: "smooth" }); // behavior opcional
+            // cerrar menú hamburguesa
+            cbox.checked = false;
+            // cambiar imagen hamburguesa
+            imagen.src = "MenuP.png";
+        });
 
         ul.appendChild(li);
     });
-    if (ul.style.visibility){
+    /*if (ul.style.visibility){
         cbox.checked = true;
     } else {
         cbox.checked = false;
-    }
-    
+    }*/
+    renderMenuC()
 }/* function renderMenu() {
     const ul = document.getElementById("menu");
     ul.innerHTML = "";
@@ -381,9 +400,9 @@ function cargar(sec) {
         return;
     }
     document.getElementById("contenido").innerHTML = textos[idioma].contenido[sec];
-    imagen.style.src = "MenuP.png";
-    imagen.src = "MenuP.png";
-    cbox.checked = false;
+    /*imagen.style.src = "MenuP.png";*/
+    /*imagen.src = "MenuP.png";
+    cbox.checked = false;*/
 }
 
 function cambiarIdioma(l) {

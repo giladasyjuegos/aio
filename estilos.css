@@ -215,12 +215,6 @@ main {
     font-size: 1.4rem;
 }
 
-/*BORRAR/.boton-menu {
-    display: none;
-    background-color: transparent;
-    border: 0;
-}*/
-
 .nav-input {
     display: none;
     background-color: transparent;
@@ -228,7 +222,7 @@ main {
 }
 
 #authBtn {
-    font-size: 1.8vmin;
+    font-size: 5.2vmin;
 }
 
 footer {
@@ -421,10 +415,32 @@ footer {
     font-size: 3vmin;
 }
 
+
 /* MEDIA QUERY */
+@media screen and (orientation: portrait) and (aspect-ratio <= 355/882) {
+    .header-right { gap: 10px !important; }
+/*    .bloque{ color: crimson; }
+    .titulo { color: blueviolet;}
+    h2 {color: chocolate;}*/
+}
+
+@media screen and (orientation: portrait) and (aspect-ratio <= 376/770) {
+/*    .header-right { gap: 10px !important; }
+    .bloque{ color: crimson; }
+    .titulo { color: blueviolet;}
+    h2 {color: chocolate;}*/
+}
+
+@media screen and (orientation: portrait) and (aspect-ratio <= 377/568) {
+    .header-right { gap: 10px !important; }
+/*    .bloque{ color: crimson; }
+    .titulo { color: blueviolet;}
+    h2 {color: chocolate;}*/
+}
+
+
 @media (660px <= width) {
     #mmenuc { display: none; visibility: hidden;}
-    /*.menu-celu { display: none; visibility: hidden; }*/
     #imgchange { display: none; }   /* OCULTA EL MENU */
     .login-btn, .logout-btn { font-size: 1.1rem; }
     .header-right { gap: 10px; }    /* espacio entre menu, idioma y login */
@@ -436,7 +452,6 @@ footer {
 /*@media (max-width: 767px) {*/
 @media (685px <= width) {
     #mmenuc { display: none; visibility: hidden;}
-    /*.menu-celu { display: none; visibility: hidden; }*/
     #imgchange { display: none; }   /* OCULTA EL MENU */
     .login-btn, .logout-btn { font-size: 1.4rem; }
     .header-right { gap: 12px; }    /* espacio entre menu, idioma y login */
@@ -448,9 +463,7 @@ footer {
 /*@media (max-width: 799px) {*/
 @media (720px <= width) {
     #mmenuc { display: none; visibility: hidden;}
-    /*.menu-celu { display: none; visibility: hidden; }*/
     #imgchange { display: none; }   /* OCULTA EL MENU (imagen) */
-    /*#imgchange { display: inherit; }*/
     .login-btn, .logout-btn { font-size: 1.7rem; }
     .header-right { gap: 15px; }    /* espacio entre menu, idioma y login */
     nav ul { gap: 12px; }           /* espacio entre items de menu */
@@ -460,7 +473,7 @@ footer {
 
 @media (width <= 659px) {
     #menu { display: none; }   /* OCULTA EL MENU (texto) */
-    .header-right { gap: 20px; } /* espacio entre menu, idioma y login */
+    /*.header-right { gap: 20px; }  espacio entre menu, idioma y login */
     header { padding: 0 15px 0 30px; } /* espacio entre menu, idioma y login */
     /*.bloque{color: rgb(0, 0, 255);}*/
 }
@@ -477,9 +490,16 @@ footer {
     }
 }
 
-/*@media screen and (orientation: portrait) {
-    .bloque {
-        background-color: #e63946;
+/*@media screen and (aspect-ratio <= 355/882) {
+    .header-right { gap: 10px !important; }
+    .bloque{ color: crimson; }
+    .titulo { color: blueviolet;}
+    h2 {color: chocolate;}
+}*/
+
+/*@media screen and (orientation: portrait) and (width ) {
+    .header-right {
+        gap: 15px;
     }
 }
 
