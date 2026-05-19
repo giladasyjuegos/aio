@@ -419,23 +419,14 @@ footer {
 /* MEDIA QUERY */
 @media screen and (orientation: portrait) and (aspect-ratio <= 355/882) {
     .header-right { gap: 10px !important; }
-/*    .bloque{ color: crimson; }
-    .titulo { color: blueviolet;}
-    h2 {color: chocolate;}*/
 }
 
 @media screen and (orientation: portrait) and (aspect-ratio <= 376/770) {
-/*    .header-right { gap: 10px !important; }
-    .bloque{ color: crimson; }
-    .titulo { color: blueviolet;}
-    h2 {color: chocolate;}*/
+    .header-right { gap: 10px !important; }
 }
 
 @media screen and (orientation: portrait) and (aspect-ratio <= 377/568) {
     .header-right { gap: 10px !important; }
-/*    .bloque{ color: crimson; }
-    .titulo { color: blueviolet;}
-    h2 {color: chocolate;}*/
 }
 
 
@@ -446,7 +437,7 @@ footer {
     .header-right { gap: 10px; }    /* espacio entre menu, idioma y login */
     nav ul { gap: 6px; }           /* espacio entre items de menu */
     header { padding: 0 1px 0 5px; }
-    /*.bloque{color: rgb(0, 255, 0);}*/
+    /*#cQCER { src: url(file:///C:/Users/mahoma/Documents/Rosana/CQpc-es.jpg); }*/
 }
 
 /*@media (max-width: 767px) {*/
