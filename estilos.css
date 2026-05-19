@@ -279,6 +279,21 @@ footer {
     grid-template-columns: 1fr 2fr;
 }
 
+.papa2 {
+    /* background-color: aquamarine; */
+    width: 90%;
+    height: auto;
+    /*max-width: 900px;*/
+    border: 2px solid #000;
+    margin: auto;
+    border-radius: 10px;
+    padding: 10px 0 15px 10px;
+    box-shadow: 1px 5px 25px #0b3c5d;
+    min-height: 80px;
+    align-items: center;
+    align-content: center;
+}
+
 .papa .cabeza { grid-area: elTitulo; }
 
 .papa .tapa-libro { grid-area: elLibro; }
