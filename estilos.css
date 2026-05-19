@@ -147,6 +147,18 @@ nav li:hover { text-decoration: underline; color: #92c7f1}
     text-justify: inter-word;
 }
 
+.centro {
+    text-align: center;
+    color: aqua;
+}
+
+.turca {
+    color: aqua;
+}
+
+i {
+    color: aqua;
+}
 
 
 /* CONTENIDO */
