@@ -46,7 +46,7 @@ h1 { font-size: 7vmin;}
     text-justify: inter-word;
 }
 .sub-azul {
-    color: blue;
+    color: #09f;
 }
 .simil-h1 {
     font-weight: bold;
@@ -149,15 +149,15 @@ nav li:hover { text-decoration: underline; color: #92c7f1}
 
 .centro {
     text-align: center;
-    color: aqua;
+    color: #09f;
 }
 
 .turca {
-    color: aqua;
+    color: #09f;
 }
 
 i {
-    color: aqua;
+    color: #09f;
 }
 
 
