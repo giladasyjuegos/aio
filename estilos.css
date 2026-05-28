@@ -294,6 +294,20 @@ footer {
     align-content: center;
 }
 
+.cartel {
+    width:fit-content;
+    height: auto;
+    /*max-width: 900px;*/
+    border: 2px solid #000;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 1px 5px 25px #0b3c5d;
+    min-height: 80px;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+}
+
 .papa .cabeza { grid-area: elTitulo; }
 
 .papa .tapa-libro { grid-area: elLibro; }
@@ -440,6 +454,16 @@ footer {
 
 .fSize2{
     font-size: 3vmin;
+}
+
+.texto-cartel {
+    display:inline-block;
+    margin: 0 10px 10px 10px;
+    vertical-align: top;
+}
+
+.img-cartel {
+    display:inline-block;
 }
 
 
