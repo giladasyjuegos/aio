@@ -525,6 +525,20 @@ footer {
     display:inline-block;
 }
 
+.img-centro {
+    display: block;
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.estrellas {
+    display: inline-block;
+    position: relative;
+    width: 200px;
+    top: 7px;
+    margin-left: 3px;
+}
 
 /* MEDIA QUERY */
 @media screen and (orientation: portrait) and (aspect-ratio <= 355/882) {
