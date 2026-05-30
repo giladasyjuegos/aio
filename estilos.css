@@ -1,8 +1,7 @@
-/*
-font: 1em monospace;
-*/
-
-html { font-size: 62.5%; }
+html { 
+    font-size: 62.5%;
+    /* font: 1em monospace; */
+}
 
 body {
     margin: 0;
