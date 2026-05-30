@@ -14,6 +14,65 @@ body {
     color: #072B42;
 }
 
+
+/* Estilo de la palabra que activa el globo */
+.globo-hover {
+  position: relative;
+  cursor: help;
+  color: #0066cc; /* Color destacado */
+  border-bottom: 1px dotted #0066cc; /* Subrayado punteado para indicar que es interactivo */
+}
+
+/* El globo en sí (oculto por defecto) */
+.globo-hover::before {
+  content: attr(data-tooltip);
+  position: absolute;
+  bottom: 125%; /* Lo ubica justo arriba de la palabra */
+  left: 50%;
+  transform: translateX(-50%) scale(0); /* Centrado y escondido (tamaño 0) */
+  background-color: #333;
+  color: #fff;
+  padding: 8px 12px;
+  border-radius: 6px;
+  font-size: 14px;
+  white-space: nowrap; /* Evita que el texto se rompa en varias líneas */
+  opacity: 0;
+  transition: all 0.3s ease; /* Animación suave */
+  pointer-events: none; /* Evita que el globo interfiera con el ratón */
+  z-index: 10;
+}
+
+/* La flechita del globo */
+.globo-hover::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 6px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+  z-index: 10;
+}
+
+/* Efecto Hover: muestra el globo al pasar el ratón */
+.globo-hover:hover::before,
+.globo-hover:hover::after {
+  opacity: 1;
+  transform: translateX(-50%) scale(1); /* Aparece escalando a tamaño normal */
+}
+
+
+
+
+
+
+
+
+
 /* h1 { font-size: 3.2rem; font-size: 8vmin;} */
 h1 { font-size: 7vmin;}
 
@@ -460,6 +519,7 @@ footer {
     display:inline-block;
     margin: 0 10px 10px 10px;
     vertical-align: top;
+    line-height: 1.3;
 }
 
 .img-cartel {
