@@ -75,6 +75,8 @@ body {
 /* h1 { font-size: 3.2rem; font-size: 8vmin;} */
 h1 { font-size: 7vmin;}
 
+
+
 .titulo { 
     font-size: 4.8vmin; 
     display:inline-block;
@@ -454,6 +456,11 @@ footer {
     min-height: calc(13vw + 14px);
 }
 
+.porta-card-txt {
+    width: 97%;
+    margin: auto;
+}
+
 .card-txt {
     /*background-color: #09f;*/
     text-align: justify;
@@ -463,6 +470,8 @@ footer {
     padding: 5px 15px 5px 10px;
     align-items: center;
     border-radius: 15px;
+    margin-left: 0;
+    padding-left: 0;
 }
 
 .card-titulo {
@@ -527,7 +536,7 @@ footer {
 
 .img-centro {
     display: block;
-    width: 70%;
+    width: 50%;
     margin-left: auto;
     margin-right: auto;
 }
