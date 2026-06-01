@@ -45,6 +45,14 @@ h1 { font-size: 7vmin;}
     text-justify: inter-word;
 }
 
+.ma-ta-no {
+    font-size: 4.4vmin; 
+    display:inline-block;
+    margin: 2px 0 10px 0;
+    text-decoration: underline;
+    margin: 1.5em;
+}
+
 .titulo { 
     font-size: 4.8vmin; 
     display:inline-block;
@@ -548,7 +556,7 @@ footer {
 
 .img-centro {
     display: block;
-    width: 50%;
+    width: 40%;
     margin-left: auto;
     margin-right: auto;
 }
