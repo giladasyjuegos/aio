@@ -674,7 +674,13 @@ footer {
 }
 
 .comentA {
-    width: 90%;
+    width: 95%;
+    margin: auto;
+}
+
+.caja-centradora {
+    display: block;
+    width: 85%;
     margin: auto;
 }
 
@@ -704,7 +710,6 @@ footer {
     }
     .img-cartel {
         width: 100%;
-        padding: auto;
         text-align: center;
         padding: 3vmin 0;
     }
@@ -718,12 +723,15 @@ footer {
     }
     .caja-centradora {
         padding: 0;
-        margin: 0;
+        margin: auto;
         text-align: left;
     }
     .estrellas {
         top: 2px;
         margin: 0 3px;
+    }
+    .cartel {
+        text-align: center;
     }
 }
 
