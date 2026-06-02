@@ -556,9 +556,10 @@ footer {
 .estrellas {
     display: inline-block;
     position: relative;
-    width: 200px;
-    top: 7px;
-    margin-left: 3px;
+    /*width: 200px;*/
+    width: 22vmin;
+    top: 5px;
+    margin: 0 3px;
 }
 
 .puntoL {
@@ -672,6 +673,11 @@ footer {
     width: auto;
 }
 
+.comentA {
+    width: 90%;
+    margin: auto;
+}
+
 /* MEDIA QUERY */
 @media screen and (orientation: portrait) {
     .tapa-libro11 { /* DIV */
@@ -714,6 +720,10 @@ footer {
         padding: 0;
         margin: 0;
         text-align: left;
+    }
+    .estrellas {
+        top: 2px;
+        margin: 0 3px;
     }
 }
 
@@ -850,6 +860,18 @@ footer {
     .tapa-libro11 {
         max-width: 450px;
         margin-left: 20px;
+    }
+    .estrellas {
+        width: 22vmin;
+        top: 8px;
+        margin: 0 15px;
+    }
+}
+
+@media screen and (orientation: landscape) and (width >= 3000px) {
+    .estrellas {
+        top: 15px;
+        margin: 0 15px;
     }
 }
 
