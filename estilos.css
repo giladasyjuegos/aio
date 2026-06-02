@@ -368,7 +368,8 @@ footer {
 }
 
 .cartel {
-    width:fit-content;
+    display: block;
+    width: fit-content;
     height: auto;
     /*max-width: 900px;*/
     border: 2px solid #000;
@@ -379,6 +380,7 @@ footer {
     align-items: center;
     align-content: center;
     padding: 20px;
+    margin: auto;
 }
 
 .papa .cabeza { grid-area: elTitulo; }
@@ -407,7 +409,7 @@ footer {
 }
 
 .cabeza {
-    display:inline-block;
+    display:block;
     width: 100%;
     font-size: 4.3vmin; 
     text-align: left;
@@ -540,6 +542,7 @@ footer {
 }
 
 .img-cartel {
+    width: fit-content;
     display:inline-block;
 }
 
@@ -566,11 +569,6 @@ footer {
     bottom: 5px;
     list-style: none;
     list-style-type: none;
-}
-
-.puntito {
-    line-height: 1.6;
-    list-style: none;
 }
 
 .caja-limpia {
@@ -694,7 +692,69 @@ footer {
     .cartel11 {
         padding: 0 20px;
     }
+    .titulo {
+        font-size: 4vmin;
+        font-weight: bolder;
+    }
+    .img-cartel {
+        width: 100%;
+        padding: auto;
+        text-align: center;
+        padding: 3vmin 0;
+    }
+    .tLibro {
+        width: 40vmin;
+    }
+    .texto-cartel {
+        width: 100%;
+        text-align:left;
+        padding: 0;
+    }
+    .caja-centradora {
+        padding: 0;
+        margin: 0;
+        text-align: left;
+    }
 }
+
+/*
+.img-cartel {
+    background-color: aquamarine;
+    width: fit-content;
+    display:inline-block;
+}
+.texto-cartel {
+    background-color: lightcoral;
+    display:inline-block;
+    margin: 0 10px 10px 10px;
+    vertical-align: top;
+    line-height: 1.3;
+}
+.cartel {
+    background-color: #e63946;
+    display: block;
+    width: fit-content;
+    height: auto;
+    /*max-width: 900px;*
+    border: 2px solid #000;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 1px 5px 25px #0b3c5d;
+    min-height: 80px;
+    align-items: center;
+    align-content: center;
+    padding: 20px;
+    margin: auto;
+}
+.cabeza {
+    background-color: #946;
+    display:block;
+    width: 100%;
+    font-size: 4.3vmin; 
+    text-align: left;
+}
+
+*/
 
 @media screen and (orientation: landscape) {
     .tapa-libro11 { /* DIV */
