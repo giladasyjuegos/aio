@@ -656,6 +656,23 @@ footer {
     padding-left: 5vmin;
     font-size: 3.3vmin;
 }
+.cartel11 {
+    width:fit-content;
+    height: auto;
+    border: 2px solid #000;
+    margin: auto;
+    border-radius: 10px;
+    box-shadow: 1px 5px 25px #0b3c5d;
+    min-height: 80px;
+    align-items: center;
+    align-content: center;
+    padding: 0 40px;
+}
+
+.lis-cursos-edades {
+    padding-left: 3vmin;
+    width: auto;
+}
 
 /* MEDIA QUERY */
 @media screen and (orientation: portrait) {
@@ -673,6 +690,9 @@ footer {
         width: auto;
         margin-right: 20px;
         text-align: center;
+    }
+    .cartel11 {
+        padding: 0 20px;
     }
 }
 
