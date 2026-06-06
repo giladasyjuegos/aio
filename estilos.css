@@ -70,9 +70,9 @@ body {
     text-decoration: none;
 }
 
-.itemDato1:hover {
-    background-color: #acd;
-}
+.decoraLink { text-decoration: none; color: #052a41;}
+
+.decoraLink:hover {  color: #000; font-weight: bold; }
 
 .itemDato2 {
     display: inline-block;
