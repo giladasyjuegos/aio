@@ -13,6 +13,93 @@ body {
     color: #072B42;
 }
 
+/* ************************* CUADRO ESTRUCTURA ORGANIZACIONAL *************************** */
+
+.centrar { width: 100%; text-align: center; }
+
+.contenedor {
+    width: fit-content;
+    min-width: 300px;
+    text-align: center;
+    vertical-align: middle;
+    margin: auto;
+    background-color: #fff;
+    border-radius: 5px;
+    box-shadow: #072B42;
+}
+
+.itemTitulo1 {
+    display: inline-block;
+    width: 34%;
+    height: 8vmin;
+    font-size: 5vmin;
+    margin-bottom: 1%;
+    color: #F0F0F0;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    align-content: center;
+    line-height: 4vmin;
+    background-color: #052a41;
+}
+
+.itemTitulo2 {
+    display: inline-block;
+    width: 65%;
+    height: 8vmin;
+    font-size: 5vmin;
+    margin-bottom: 1%;
+    color: #F0F0F0;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    align-content: center;
+    line-height: 4vmin;
+    background-color: #052a41;
+}
+
+.itemDato1 {
+    display: inline-block;
+    width: 34%;
+    color: #000;
+    font-size: 2.8vmin;
+    line-height: 6vmin;
+    text-align: right;
+    align-content: center;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    margin-bottom: 0.5%;
+    text-decoration: none;
+}
+
+.itemDato1:hover {
+    background-color: #acd;
+}
+
+.itemDato2 {
+    display: inline-block;
+    width: 65%;
+    color: #000;
+    font-size: 2.8vmin;
+    line-height: 6vmin;
+    text-align: left;
+    align-content: center;
+    border: 2px solid #fff;
+    box-sizing: border-box;
+    margin-bottom: 0.5%;
+    text-decoration: none;
+}
+
+.gris1 {
+    background-color: #95cff0;
+}
+
+.gris2 {
+    background-color: #79bde7;
+}
+
+/* ************************* / CUADRO ESTRUCTURA ORGANIZACIONAL *************************** */
+
+
+
 /* h1 { font-size: 3.2rem; font-size: 8vmin;} */
 h1 { font-size: 7vmin;}
 
@@ -894,6 +981,7 @@ footer {
         border: 2px solid #aaa;
         border-radius: 10px;
     }
+    .contenedor { width: 60%; }
 }
 
 @media screen and (orientation: portrait) and (aspect-ratio <= 355/882) {
@@ -916,6 +1004,7 @@ footer {
         /*background-color: darkgoldenrod;*/
         margin: 8vmin 0;
     }
+    .contenedor { width: 75%; }
 }
 @media screen and (orientation: landscape) and (aspect-ratio = 16/9) {
     .grido1 { margin-top: 0.1vmin; }
