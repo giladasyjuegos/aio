@@ -30,7 +30,7 @@ body {
 
 .itemTitulo1 {
     display: inline-block;
-    width: 34%;
+    width: 38%;
     height: 8vmin;
     font-size: 5vmin;
     margin-bottom: 1%;
@@ -44,7 +44,7 @@ body {
 
 .itemTitulo2 {
     display: inline-block;
-    width: 65%;
+    width: 61%;
     height: 8vmin;
     font-size: 5vmin;
     margin-bottom: 1%;
@@ -58,7 +58,7 @@ body {
 
 .itemDato1 {
     display: inline-block;
-    width: 34%;
+    width: 38%;
     color: #000;
     font-size: 2.8vmin;
     line-height: 6vmin;
@@ -76,7 +76,7 @@ body {
 
 .itemDato2 {
     display: inline-block;
-    width: 65%;
+    width: 61%;
     color: #000;
     font-size: 2.8vmin;
     line-height: 6vmin;
