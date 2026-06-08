@@ -156,6 +156,7 @@ h1 { font-size: 7vmin;}
 }
 
 .tituloQCER { font-size: 3.4vmin; }
+.diezPX { margin-top: 5px; height: 1px; }
 
 .cuadroQCER {
     font-size: 2.5vmin;
@@ -245,17 +246,30 @@ h1 { font-size: 7vmin;}
     border-style: solid;
 }
 
+.centra-texto-cuadroQCER { margin: auto; }
+
+#cQCER { margin: 10px 10px 5px 0; }
+
+.centra-container {
+    display: block;
+    /*width: calc(100% - 30px);*/
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
 .container {
     /*width: calc(100vw - 100px);*/
-    width: 94%;
+    width: 100%;
     /*max-width: 1800px;*/
-    padding: 10px 23px 15px 15px;
+    /*padding: 10px 23px 15px 15px;*/
     background-color: #09f;
+    box-sizing: border-box;
     border-radius: 10px;
     line-height: 1.4;
     box-shadow: 1px 5px 25px #0b3c5d;
-    /*margin: 1px 20px 1px 1px;*/
-    overflow: hidden;
+    padding: 0 10px 5px 10px;
+/*    overflow: hidden;*/
 }
 
 .container img {
@@ -848,6 +862,27 @@ footer {
     margin: 0;
 }
 
+#cQCER { border-radius: 10px; }
+
+/*
+    .mi-imagen-QCER {
+  width: 150px;
+  height: 400px;
+  background-image: url('CQcelu-it.png');
+  background-size: cover;
+  background-size:;
+  background-position: center;
+/
+        width: 60vw;
+        height: 40vw;
+        background-image: url('CQcelu-it.png');
+        background-size: cover;
+        background-position: center;
+        .mi-imagen-QCER { background-image: url('CQcelu-it.jpg');
+    } */
+
+
+
 /* MEDIA QUERY */
 @media screen and (orientation: portrait) {
     .tapa-libro11 { /* DIV */
@@ -912,7 +947,16 @@ footer {
     .papa-casos { padding: 0; }
     .grido2 { width: calc(100% - 10px); }
     .itemDato1 { font-size: 2.4vmin; }
+/*    .mi-imagen-QCER {
+        width: 60vw;
+        background-image: url('CQcelu-it.png');
+        background-size: cover;
+        background-position: center;
+        .mi-imagen-QCER { background-image: url('CQcelu-it.png'); }
+    } */
 }
+
+
 
 /*
 .img-cartel {
@@ -954,6 +998,9 @@ footer {
 */
 
 @media screen and (orientation: landscape) {
+    .tituloQCER { margin: 0; padding: 0; }
+    #cQCER { padding-right: 15px; border: 0.5px; border-radius: 15px;}
+    .container { padding: 20px 25px 15px 20px; }
     .tapa-libro11 { /* DIV */
 /*        background-color:chartreuse;*/
         display: inline-block;
@@ -982,16 +1029,24 @@ footer {
         border: 2px solid #aaa;
         border-radius: 10px;
     }
-    .contenedor { width: 60%; }
+/*    .contenedor { width: 60%; }
+        .mi-imagen-QCER {
+        width: 60vw;
+        background-image: url('CQpc-it.png');
+        background-size: cover;
+        background-position: center;
+        .mi-imagen-QCER { background-image: url('CQpc-it.jpg'); }
+    } */
+
 }
 
-@media screen and (orientation: portrait) and (aspect-ratio <= 355/882) {
+/*@media screen and (orientation: portrait) and (aspect-ratio <= 355/882) {
     .header-right { gap: 10px !important; }
 }
 
 @media screen and (orientation: portrait) and (aspect-ratio <= 376/770) {
     .header-right { gap: 10px !important; }
-}
+} */
 
 @media screen and (orientation: portrait) and (aspect-ratio <= 377/568) {
     .header-right { gap: 10px !important; }
@@ -1122,6 +1177,16 @@ footer {
     }
 }*/
 
+@media (orientation: landscape) {
+  .mi-imagen-QCER {
+    background-image: url('CQpc-it.jpg');
+  }
+}
+@media (orientation: portrait) {
+  .mi-imagen-QCER {
+    background-image: url('CQcelu-it.jpg');
+  }
+}
 
 /* ANIMACIONES */
 @keyframes fadeIn {
